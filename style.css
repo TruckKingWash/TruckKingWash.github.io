@@ -1,0 +1,295 @@
+/* Style the navbar */
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+
+}
+
+#bg {
+
+    z-index: 1;
+        /*Linear Gradient*/
+
+    /* background: url(truck.jpeg) center, center, linear-gradient(0, rgba(255,0,0,0), rgba(255,255,255,1)); */
+
+    background-image:
+    linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.2)),
+    url(images/truck.jpeg);
+
+    object-fit: cover;
+    /* Set rules to fill background */
+    max-height: 100%;
+    /* min-width: 1024px; */
+      
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: 100%;
+      
+    /* Set up positioning */
+    position: relative;
+    display: block;
+    background-size: cover;
+    background-color: rgb(237, 40, 40);
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#navbar{
+
+    /* How far from the top of the outer div */
+    z-index: 2;
+    margin-top: 0%;
+    background-color: rgba(64, 36, 36, 0.4);;
+
+    /* Height of the div */
+    height: auto;
+
+    /* The length of the div */
+    width: 100%;
+
+    /*How rounded the div is*/
+    position: fixed;
+
+
+
+
+
+}
+
+#links{
+    width: 60%;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#links a {
+    height: 50px; 
+    background-color: black;
+    width: auto;
+
+
+    /* aligns vertically center */
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 24px;
+    color:white;
+}
+
+#map{
+    width: 30%;
+    height: 60%;
+    background-color: red;
+    margin-left: 10%;
+    margin-top: 10%;
+    position: absolute;
+    /* margin-top: 10%; */
+
+}
+
+@media only screen and (max-width: 660px) {
+    /* For mobile phones: */
+    #map {
+      width: 80%;
+      background-color: red;
+      /* margin: auto; */
+      margin-top:2%;
+      max-height: 40%;
+    }
+    #navbar {
+        width: 90%;
+        margin-top: 2%;
+        margin-left: 5%;
+
+        background-color: red;
+        display: block;
+      }
+  }
+
+  /*Slideshow CSS*/
+
+#slideshow{
+    width: 100%;
+    justify-content: center;
+    background-color: red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.slideshow-container {
+
+    margin-top: 4%;
+    
+    width:20%; 
+    max-width:60%; 
+
+    /* object-fit: cover; */
+    position: relative;
+    background-color: rgb(196, 110, 196);
+  }
+
+  .mySlides .numbertext img{
+    width: 60px;
+    object-fit: cover;
+
+  }
+
+  /* Hide the images by default */
+.mySlides {
+    display: blocks;
+    width:100%;
+    max-width: 100%;
+
+    
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 100px;
+    padding: 8pxx;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    padding-bottom: 2%;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+/* END Slideshow CSS*/
+
+
+
+#prices{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#prices h1{
+  padding-top: 3%;
+  font-size: 4rem;
+}
+
+
+.price_table {
+  width: 75%;
+  text-align: left;
+  padding-left: 2%;
+  font-family: 'Times New Roman', Times, serif;
+  border-collapse: collapse;
+
+}
+
+.price_table tbody{
+  font-size: 2rem;
+  font-weight: bold;
+  border-spacing:0 15px;
+
+}
+
+.price_table tbody tr{
+border-top: 5px solid black;
+padding: 100px;
+}
+
+.price_table tbody tr:first-child{
+  border-top: 10px solid black;
+}
+.price_table tbody tr:last-child{
+  border-bottom: 10px solid black;
+}
+
+/* .category_table tr:first-child td {
+  vertical-align: top;
+} */
+
+.price_table tbody tr:hover{
+  background-color: grey;
+  color: white;
+}
+
+.price_table thead{
+  font-size: 3rem;
+  font-weight: none;
+  color: black;
+  border-bottom: 5px solid grey;
+  line-height: 100px;
+}
+  
